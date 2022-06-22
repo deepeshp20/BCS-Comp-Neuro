@@ -27,10 +27,12 @@ ue=False
 while 1:
     print_menu()
     c= input("type the command ")
+    
     if(c=='P'):
         print("\n")
         print(arr)
         print("\n")
+        
     elif(c=='A'):
         num=int(input("type the number you want to add "))
         if(ue==True):
@@ -45,6 +47,7 @@ while 1:
         else:
             arr.append(num)
         flag=0
+        
     elif(c=='S'):
         t=input("to sort small to large type \"s\" otherwise to sort large to small type \"l\" ")
         if(t=='s'):
@@ -53,6 +56,7 @@ while 1:
             arr.sort(reverse=True)
         flag=1
         print("\narray is sorted\n")
+        
     elif(c=='R'):  
         if(flag==1):
             index=int(input("Type the rth position you want search "))
@@ -60,13 +64,16 @@ while 1:
             print("\n")
         else:
             print("\narray is not sorted\n")
+            
     elif(c=='N'):
         if(ue==False):
             ue=True
         else:
             ue=False
+            
     elif(c=='Q'):
         break 
+        
     else:
         print("\nInvalid Command")
 
